@@ -143,7 +143,7 @@ below command will not work, because of this ip did't mention. only mantion cont
 #### add a container in newly created network
     docker run -dti --network network_name --name contianer3 centos 
 #### docker-compse.yml
-    docker-compse up
+    docker-compse up -d
     docker-compse up --build
     docker-compse down
     docker-compse stop
@@ -154,3 +154,4 @@ below command will not work, because of this ip did't mention. only mantion cont
     sudo su
     cd /var/lib/docker
     ls
+
