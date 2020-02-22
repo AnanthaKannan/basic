@@ -13,3 +13,5 @@
 [More on Cursors](https://docs.mongodb.com/manual/tutorial/iterate-a-cursor/)
 
 [Query Operator Reference](https://docs.mongodb.com/manual/reference/operator/query/)
+
+[Lookup Stackoverflow](https://stackoverflow.com/questions/35813854/how-to-join-multiple-collections-with-lookup-in-mongodb)
