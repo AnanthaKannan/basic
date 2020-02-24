@@ -1,5 +1,7 @@
 #### show list of db
     show dbs
+    show collections	
+
 #### show list of collections
     show collections
 #### create database 
