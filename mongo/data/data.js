@@ -96,7 +96,7 @@ db.chkdata.find({
 }, {
     _id: 0,
     'application_form.$': 1
-})[0]
+})
 
 
 
