@@ -17,6 +17,11 @@ if you are not already create db, you can use it.
 #### check about db or details about db
     db.states
 
+#### coonect cloud mongo to local shell
+    mongo
+    conn = new Mongo();
+    db = conn.getDB("databasename");
+    db = connect("localhost:27020/myDatabase");
 
 #### import the data into the collection
     mongoimport jsonfile.json -d dbname -c collectionName --jsonArray
