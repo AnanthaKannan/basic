@@ -1,4 +1,7 @@
 ### docker-basic
+     192.168.43.233
+    -ti terminal interactive
+    -d detach mode
 ### convert sudo to user
     groups
     whoami
@@ -154,4 +157,5 @@ below command will not work, because of this ip did't mention. only mantion cont
     sudo su
     cd /var/lib/docker
     ls
+
 

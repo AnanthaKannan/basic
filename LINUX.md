@@ -1,3 +1,5 @@
+## Linux command Basic
+
 #### create folder
     mkdir folder-name
 #### write something in file
@@ -12,6 +14,11 @@
     screen
 #### List out all running ports
     sudo lsof -i -P -n | grep LISTEN
+
+    lsof -  list of open files
+    -i  -   list
+    -P  -   PID
+    
 #### Kill the port (Use any one)
     kill port - sudo fuser -k  3000/tcp
     sudo kill -9 $(sudo lsof -t -i:3000)
