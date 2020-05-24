@@ -2,6 +2,7 @@
      192.168.43.233
     -ti terminal interactive
     -d detach mode
+    -t tag
 ### convert sudo to user
     groups
     whoami
@@ -12,6 +13,9 @@ now we can use docer command with out using sudo in perifix
 
 ### Automatically start the docer when you start the machine
     sudo systemctl enable docker
+
+### Remove unused tings
+    docker system prune
 
 ### download docker image from docker hub
     doker pull imgname
@@ -64,6 +68,11 @@ docker rmi c7460dfcab50
 #### build the docker
 #### by defaulf Dockerfile is choose
     docker build --tag centose_apache:v1 .
+### if you want to choose a specify file
+    docker build --tag centose_appache:v1 -f Dockerfile1 .
+### if the dockerfile inside the folder
+    docker build --tag centose_appache:v1 -f  foldername/Dockerfile1 foldername/
+
 #### if you want to mention name of dockerfile
     docker build --tag nginx_custom:v1 -f Dockerfile
 now you centose_apache added in your image list

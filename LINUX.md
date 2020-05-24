@@ -18,7 +18,11 @@
     lsof -  list of open files
     -i  -   list
     -P  -   PID
-    
+
+### Find the file size
+    du -shc *
+    du -sh foldername
+
 #### Kill the port (Use any one)
     kill port - sudo fuser -k  3000/tcp
     sudo kill -9 $(sudo lsof -t -i:3000)
