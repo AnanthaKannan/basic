@@ -16,6 +16,7 @@ chmod
 man + help => just like manual help
 nano
 cat => caterante
+
 ##### Command usage
 ls /home/
 ls --help
@@ -79,3 +80,15 @@ third one for others
 Path for your interpreter
 
     #!/bin/sh
+
+### Special variable
+
+$0      # File Name of the script
+$1....9 # Get position of the number
+$#      # Number of argument supplied by script
+$*      # show the all arguments which is double coted
+$@      # show the all arguments which is indually double coted
+$?      # exist status, that your last command executed // if the exist status is zero then             last command is executed successfully
+$$      # give the process id (process no of current shell)
+
+### Shell Loops

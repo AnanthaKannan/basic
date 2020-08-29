@@ -11,6 +11,20 @@ let arr = [{
     "aircraft": "Airbus A320",
     "distance": 950,
     "intercontinental": false
+},
+{
+    "departureAirport": "MUC",
+    "arrivalAirport": "TNV",
+    "aircraft": "Airbus A555",
+    "distance": 18000,
+    "intercontinental": false
+},
+{
+    "departureAirport": "PHA",
+    "arrivalAirport": "NYT",
+    "aircraft": "Airbus A657",
+    "distance": 18000,
+    "intercontinental": false
 }]
 
 
