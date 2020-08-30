@@ -39,10 +39,10 @@ db.movies.find({runtime:{$lte: 60}})
 db.movies.find({runtime:{$gte: 60}})
 
 // equal to 30 or 40
-db.movies.find({runtime:{$in: [30, 40]}})
+db.movies.find({runtime:{$in: [14, 120]}})
 
 // not equal to 30 or 40
-db.movies.find({runtime:{$nin: [30, 40]}})
+db.movies.find({runtime:{$nin: [60, 30]}})
 
 ```
 
