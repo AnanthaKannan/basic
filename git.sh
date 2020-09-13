@@ -1,5 +1,5 @@
 echo "========= GIT =========="
 
 git add .
-git commit -m 'updated'
-git push
+git commit -m "$*"
+# git push
