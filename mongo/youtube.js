@@ -1,46 +1,25 @@
-db.movieList.find(
-    {},
-    { runtime: 1, name: 1 }
-).toArray()
+db.studentdetails.aggregate([
+    { $unwind: "$application_form" },
+    { $sort: { 'application_form.application_date': -1 }},
+    {
+        $project: {
+            'application_form.appointment_date':1,
+            'application_form.application_no':1,
+            'application_form.full_name':1,
+            'application_form.application_date':1,
+            'application_form.primary_status':1,
+            'application_form.ssc_status':1,
+            'application_form.final_status':1
+        }
+    }
+]).pretty()
 
-// 170
-db.movieList.find(
-    { runtime: { $eq: 60} },
-    { runtime: 1, name: 1 }
-).count()
 
-
-db.movieList.find(
-    { runtime: { $ne: 60}},
-    { runtime: 1, name: 1 }
-).toArray()
-
-db.movieList.find(
-    { runtime: { $lt: 60 }},
-    { runtime: 1, name: 1 }
-).toArray()
-
-db.movieList.find(
-    { runtime: { $gt: 60 }},
-    { runtime: 1, name: 1 }
-).toArray()
-
-db.movieList.find(
-    { runtime: { $lte: 60 }},
-    { runtime: 1, name: 1 }
-).toArray()
-
-db.movieList.find(
-    { runtime: { $gte: 60 }},
-    { runtime: 1, name: 1 }
-).toArray()
-
-db.movieList.find(
-    { runtime: { $in: [25, 120] }},
-    { runtime: 1, name: 1 }
-).toArray()
-
-db.movieList.find(
-    { runtime: { $nin: [60, 30] }},
-    { runtime: 1, name: 1 }
-).toArray()
+// {
+//     $group: {
+//         _id: { 
+//             application_date: "$application_form.application_date",
+//             application_no: "$application_form.application_no"
+//          }
+//     }
+// },

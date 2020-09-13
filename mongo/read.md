@@ -38,7 +38,7 @@ db.movies.find({runtime:{$lte: 60}})
 // "Greater then or equal" 60 || >= 60
 db.movies.find({runtime:{$gte: 60}})
 
-// equal to 30 or 40
+// equals any value in the specified array to 30 or 40
 db.movies.find({runtime:{$in: [14, 120]}})
 
 // not equal to 30 or 40
@@ -82,7 +82,7 @@ db.movies.find({ "rating.average":{$gt:9} ,  genres: "Drama" })
 
 // if above both are same, then why this AND operator
 db.movies.find({  genres: "Action" ,  genres: "Drama" })
-// in the above geners key is repeated with different data. some times all drivers not supported above query because of javascript. the javascript json data not accepted the repeated keys
+// in the above genres key is repeated with different data. some times all drivers not supported above query because of javascript. the javascript json data not accepted the repeated keys
 ```
 
 #### Element operator
