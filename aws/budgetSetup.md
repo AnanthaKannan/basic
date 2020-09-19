@@ -1,4 +1,4 @@
-### Budged setup
+# Budged setup
 
 You can set the maximum amount in bulling of (monthly, yearly or particular date ). If your billing is exceed, then you will get alert mail.
 
