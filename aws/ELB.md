@@ -1,5 +1,6 @@
 # ELB (Elastic Load Balance)
-<img width="80%" alt="portfolio_view" src="./img/lb.png">
+    Spread load across multiple instance.
+<img width="50%" alt="portfolio_view" src="./img/lb.png">
 
 ## Scalability
 1. Vertical Scalability
