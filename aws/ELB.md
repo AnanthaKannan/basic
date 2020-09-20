@@ -1,6 +1,6 @@
 # ELB (Elastic Load Balance)
     Spread load across multiple instance.
-<img width="50%" alt="portfolio_view" src="./img/lb.png">
+<img width="60%" alt="portfolio_view" src="./img/lb.png">
 
 ## Scalability
 1. Vertical Scalability
@@ -20,3 +20,6 @@ The use of high availability is if one sever down in any of the situation then a
 
 1. Auto Scaling Group AZ
 2. Load Balancer Multi AZ
+
+## Health Check
+To check the health of the project
