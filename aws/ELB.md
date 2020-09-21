@@ -23,3 +23,21 @@ The use of high availability is if one sever down in any of the situation then a
 
 ## Health Check
 To check the health of the project
+1. It is crucial for Load Balancer
+2. They enable the load balancer to know if instance is forwards traffic to are available to replay to request
+3. if the response is not 200 (OK), then the instance is unhealthy 
+4. It will check every 5sec or 10sec (you can configure)
+
+----
+## Type of Load Balancer
+1. Classic load Balancer (v1 - Old generation) - 2009 <br/> HTTP, HTTPS, TCP
+2. Application Load Balancer (v2 - new generation) - 2016 <br/> HTTP, HTTPS, WEBSOCKET
+3. Network Load Balancer (v2 - new generation) -2016 <br/> TCP, TLS (Secure TCP), UDP
+
+<br/>
+
+You can setup internal and external ELBs
+
+----
+
+<img width="60%" alt="portfolio_view" src="./img/lb2.png">
