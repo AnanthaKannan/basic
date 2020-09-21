@@ -22,3 +22,10 @@ echo "INSTALL DOCKER ENGINE"
 sudo apt-get update
 
 sudo apt-get install docker-ce docker-ce-cli containerd.io
+
+echo "add user"
+sudo usermod -aG docker ${USER}
+
+echo "check docker version"
+docker -v
+docker-compose -v
