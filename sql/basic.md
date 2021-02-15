@@ -45,3 +45,4 @@ If you want to insert data from some other table you can use this one.
 ### Delete Data in the table
     DELETE FROM <tableName> WHERE <columnName> = 'value-1'
 
+
