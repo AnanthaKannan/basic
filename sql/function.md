@@ -12,7 +12,7 @@
 | SELECT IIF(1 > 10, 'true', 'false')  | return values depend up on condition  |
 |  RAND() |   Random number generation |
 | SELECT ABS(CHECKSUM(NEWID()) % (@max - @min - 1)) + @min | Random values between two numbers  |
-|   |   |   
+|  select [value] from STRING_SPLIT ('18,20,22', ',') |  use to split the values |   
 |   |   |
 |   |   |
 |   |   |
