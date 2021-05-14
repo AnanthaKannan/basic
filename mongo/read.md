@@ -153,7 +153,7 @@ db.users.find({ hobbies: { $size: 2} })
 db.movies.find({genres: { $all:["Drama", "Horror"] }})
 
 // elemMatch operator
-// title should be cooking and frequency gretater or equal to 6
+// title should be cooking and frequency greater or equal to 6
 db.users.find({
     hobbies: { $elemMatch: { title:"cooking", frequency: {$gte: 6} }}
 })
