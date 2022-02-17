@@ -118,13 +118,14 @@ from there.
 
 
 #### Docker network
-Networks in docker are way useful to provide network connection between containers
+Networks in docker are way useful to provide network connection between containers, Bridge network is the default network in docker
     Bridge network
     Host network
     None network
 #### check bridge network
     docker network ls
     docker network inspect bridge
+    docker inspect containerId
 
 
 #### docker network basic command
