@@ -52,7 +52,7 @@ docker rmi c7460dfcab50
 #### remove the container 
     docker rm containerid
     docker rm -f containerid
-    docker rm $(docker ps -aq)
+    docker rm $(docker ps -aq)     => remove all the container
     sudo aa-remove-unknown => some time error will come like unknow. that time use this command
 #### example: 
     docker rm c7460dfcab50
