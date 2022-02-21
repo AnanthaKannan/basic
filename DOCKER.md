@@ -167,5 +167,6 @@ below command will not work, because of this ip did't mention. only mantion cont
     sudo su
     cd /var/lib/docker
     ls
-
+#### Install Mongo
+     docker run -d -p 27017:27017 --name mongo mongo:latest
 
