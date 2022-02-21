@@ -143,9 +143,9 @@ gateway : 172.17.0.2        gateway : 172.17.0.3
 
 only you can ping container with ip address
     docker exec container1 bash -c "ping 172.17.0.3"
-below command will not work, because of this ip did't mention. only mantion container name
+below command will not work, because of this ip did't mention. only mention container name
     docker exec container1 bash -c "ping container2"
-1. by default network you can't pint with conatiner name
+1. by default network you can't pint with container name
 2. if you are creating new network, you can ping container with name
 
 #### creating docker network
