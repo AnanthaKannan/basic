@@ -52,7 +52,7 @@ docker rmi c7460dfcab50
 #### remove the container 
     docker rm containerid
     docker rm -f containerid
-    docker rm $(docker ps -aq)
+    docker rm $(docker ps -aq)     => remove all the container
     sudo aa-remove-unknown => some time error will come like unknow. that time use this command
 #### example: 
     docker rm c7460dfcab50
@@ -167,5 +167,6 @@ below command will not work, because of this ip did't mention. only mention cont
     sudo su
     cd /var/lib/docker
     ls
-
+#### Install Mongo
+     docker run -d -p 27017:27017 --name mongo mongo:latest
 
