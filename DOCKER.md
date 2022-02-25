@@ -154,19 +154,32 @@ below command will not work, because of this ip did't mention. only mention cont
 #### remove docker network
     docer netwrok rm netwrok_name
 #### add a container in newly created network
-    docker run -dti --network network_name --name contianer3 centos 
+```
+docker run -dti --network network_name --name contianer3 centos 
+```
 #### docker-compse.yml
-    docker-compse up -d
-    docker-compse up --build
-    docker-compse down
-    docker-compse stop
-    docker-compse start
+```
+docker-compse up -d
+docker-compse up --build
+docker-compse down
+docker-compse stop
+docker-compse start
+```
     
 #### goto docker root folder
-    docker info | grep -i root
-    sudo su
-    cd /var/lib/docker
-    ls
+```
+docker info | grep -i root
+sudo su
+cd /var/lib/docker
+ls
+```
 #### Install Mongo
-     docker run -d -p 27017:27017 --name mongo mongo:latest
-
+```
+docker run -d -p 27017:27017 --name mongo mongo:latest
+```
+#### Install Grafana
+```
+docker run -d -p 3000:3000 --name grafana grafana/grafana-enterprise:latest
+username: admin
+password: admin
+```

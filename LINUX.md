@@ -13,12 +13,17 @@
 #### Server running in background
     screen
 #### List out all running ports
-    sudo lsof -i -P -n | grep LISTEN
-
-    lsof -  list of open files
-    -i  -   list
-    -P  -   PID
-
+```
+sudo lsof -i -P -n | grep LISTEN
+```
+```
+lsof -  list of open files
+```
+```
+ -i  -   list
+```
+ -P  -   PID
+```
 ### Find the file size
     du -shc *
     du -sh foldername

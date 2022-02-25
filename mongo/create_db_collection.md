@@ -15,7 +15,7 @@ if you are not already create db, you can use it.
     db.myCollection.drop()
 
 #### check about db or details about db
-    db.states
+    db.states()
 
 
 #### import the data into the collection
