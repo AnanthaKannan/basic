@@ -30,12 +30,12 @@ It will work form left to right. so if you are try to fetch the data, then *gend
 
 ### Partial Index
 ```js
-db.collectionName.createIndex({
-  "dob.age": 1,
-    { 
+db.collectionName.createIndex(
+  { "dob.age": 1 },
+  { 
       partialFilterExpression: { gender: "male"}
-    }
-  })
+  }
+)
 ```
 It will used in the index only for particular query, the query should be the condition that `gender: "male"`
 
