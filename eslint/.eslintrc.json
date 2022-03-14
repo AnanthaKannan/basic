@@ -1,0 +1,16 @@
+{
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es2021": true
+    },
+    "extends": "eslint:recommended",
+    "parserOptions": {
+        "ecmaVersion": "latest"
+    },
+    "rules": {
+        "no-duplicate-imports":"error",
+        "no-restricted-imports": ["error", "lodash", "nodemailer"],   // it will not allow to import lodash and nodemailer
+        "eqeqeq": "error",  // it will not allow to use == and !=
+    }
+}

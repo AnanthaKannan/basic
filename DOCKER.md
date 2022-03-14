@@ -52,7 +52,7 @@ docker rmi c7460dfcab50
 #### remove the container 
     docker rm containerid
     docker rm -f containerid
-    docker rm $(docker ps -aq)
+    docker rm $(docker ps -aq)     => remove all the container
     sudo aa-remove-unknown => some time error will come like unknow. that time use this command
 #### example: 
     docker rm c7460dfcab50
@@ -118,13 +118,14 @@ from there.
 
 
 #### Docker network
-Networks in docker are way useful to provide network connection between containers
+Networks in docker are way useful to provide network connection between containers, Bridge network is the default network in docker
     Bridge network
     Host network
     None network
 #### check bridge network
     docker network ls
     docker network inspect bridge
+    docker inspect containerId
 
 
 #### docker network basic command
@@ -142,9 +143,9 @@ gateway : 172.17.0.2        gateway : 172.17.0.3
 
 only you can ping container with ip address
     docker exec container1 bash -c "ping 172.17.0.3"
-below command will not work, because of this ip did't mention. only mantion container name
+below command will not work, because of this ip did't mention. only mention container name
     docker exec container1 bash -c "ping container2"
-1. by default network you can't pint with conatiner name
+1. by default network you can't pint with container name
 2. if you are creating new network, you can ping container with name
 
 #### creating docker network
@@ -153,18 +154,32 @@ below command will not work, because of this ip did't mention. only mantion cont
 #### remove docker network
     docer netwrok rm netwrok_name
 #### add a container in newly created network
-    docker run -dti --network network_name --name contianer3 centos 
+```
+docker run -dti --network network_name --name contianer3 centos 
+```
 #### docker-compse.yml
-    docker-compse up -d
-    docker-compse up --build
-    docker-compse down
-    docker-compse stop
-    docker-compse start
+```
+docker-compse up -d
+docker-compse up --build
+docker-compse down
+docker-compse stop
+docker-compse start
+```
     
 #### goto docker root folder
-    docker info | grep -i root
-    sudo su
-    cd /var/lib/docker
-    ls
-
-
+```
+docker info | grep -i root
+sudo su
+cd /var/lib/docker
+ls
+```
+#### Install Mongo
+```
+docker run -d -p 27017:27017 --name mongo mongo:latest
+```
+#### Install Grafana
+```
+docker run -d -p 3000:3000 --name grafana grafana/grafana-enterprise:latest
+username: admin
+password: admin
+```
