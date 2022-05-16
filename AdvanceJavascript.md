@@ -10,7 +10,9 @@
 
 2. interpreter vs compiler?
   ```
-  Interpreter translates just one statement of the program at a time into machine code. Compiler scans the entire program and translates the whole of it into machine code at once. An interpreter takes very less time to analyze the source code
+  Interpreter translates just one statement of the program at a time into machine code. 
+  Compiler scans the entire program and translates the whole of it into machine code at once. 
+  An interpreter takes very less time to analyze the source code
 
   Interpreter is convert to byte code and compiler is convert to machine code.
   ```
@@ -49,6 +51,14 @@
   TypeScript is a superset of JavaScript that compiles to clean, readable, and efficient code.
   Once in execution progress, It is compile down to JS
   ```
+
+9. Heap and stack memory allocation
+  ```
+  All the primitive types, like number, Boolean, or undefined will be stored on the stack
+ Heap is the place for reference types like objects, arrays, and functions.
+  ```
+<img src="assets/javascript-fifo-stack-diagram.png" alt="drawing" style="width:50%; height:auto;"/>
+<img src="assets/javascript-reference-types-stack-vs-heap.png" alt="drawing" style="width:500px; height:auto;"/>
 
 ## My Questions:
 * What is run time environment?
