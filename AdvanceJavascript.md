@@ -177,7 +177,7 @@ function foo(){
 foo();  // Lexical environment of foo is global
 ```
 ### 17. Hoisting
-Hoisting is a process of moving the variable declaration to the top of the function.
+Hoisting is a process of moving the variable declaration to the top of the function. Basically hoisting happens for var variable and the normal function. so it is allocated the memory in the beginning itself.
 
 ```js
 function foo(){
@@ -188,12 +188,22 @@ foo();
 /*
 Here a is undefined, because the variable declaration is moved to the top of the function.
 */
-
-*/
 ```
 
+### 18. Function expression and function declaration
 
+```js
+// Function expression
+var sing2 = function(){
+  console.log("Lets dance");
+}
 
+// Function declaration
+function sing(){
+  console.log("Lets dance ohhh la la la");
+}
+```
+  
 
 
 
