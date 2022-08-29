@@ -197,7 +197,7 @@ console.log(one); // 2
 
 
 ### 18. Function expression and function declaration
-* Function expression is defined run time.
+* Function expression is defined run time (defined means allocate the memory) .
 * function declaration is defined compile time.
 
 
@@ -212,7 +212,177 @@ function sing(){
   console.log("Lets dance ohhh la la la");
 }
 ```
+
+### How to use javascript optimism, so it is performance is good?
+We should avoid this as much as possible. Because this below code JS getting not possible to optimize the code.
+* eval()
+* arguments
+* for in
+* with
+* delete
+* Hidden classes
+* Inline caching
   
+### 19. Arguments keyword
+* Argument is created when the new execution context created in the function.
+* If you are try to console arguments in global it will throw error
+* If you are try to run with the arrow function, it is will not give the same response like below
+```js
+function marry(person1, person2){
+  console.log(arguments);     // [Arguments] { '0': 'kannan', '1': 'sowmiya' }
+  console.log(Array.form(arguments))  // ['kannan', 'sowmiya']
+}
+
+marry('annan', 'sowmiya')
+
+/* we should avoid this argument, so JS will convert our code more optimize,
+In order to avoid, we can follow the es6 features
+*/
+function marry(...args){
+  console.log(args);    // ['kannan', 'sowmiya']
+}
+
+marry('kannan', 'sowmiya')
+```
+
+### Variable Environment
+```js
+function two() {
+  var isValid;  // local variable
+}
+
+function one() {
+  var isValid = true; // local variable
+  two();
+}
+
+var isValid = false;
+one();
+```
+Explain of the above code
+
+*  first its hosting the `isValid` variable, and assign the value is `undefined`
+*  agin it is assign the value as a false
+*  Invoke the `one()` function, so it is create new execution context 
+*  Inside the `one()` function, it is again happen the hosting, but hoisting happen inside the `one()` function
+*  again it is called `two()` function, so this also create the local variable inside the `tow()` function
+*  finally the global variable `isValid` will not affect the from the other function, so it is remain the same.
+
+### Scop chain
+Normally every function have a variable environment. This variable environment is store the local variable data inside that. for example if you console one value, first it will try to get the data from local environment, if it is not there, then it will try to check from the global environment.
+
+all the local variable environment connect with the global environment, the connection is called as scop chain
+
+### Function scope
+```js
+if (5> 4){
+  var secret = 10012
+}
+console.log(secret) // 10012
+```
+we can access the `secret` variable values outside of the condition. Because We only create new environment or scop inside the function only.
+```js
+function a(){
+  var secret = 100;
+}
+console.log(secret) // throw error
+// it is creating new scope, so you can't able to access outside. it is called as function scope
+```
+### Blok scope
+```js
+if (5> 4){
+  const secret = 10012
+}
+console.log(secret) // throw error
+```
+if any variable there inside the carly bracket, then you can't able to access from the outside. It is call Block scop
+
+###  IIFE (Immediate Invoke Function Expression)
+```js
+// needs to some more depth on this
+(function () {
+
+})();
+```
+If we create IIFE, then the global property will not happened. if any one of the variable there inside, you can't able to access it outside.
+
+### this keyword
+`this` keyword is equal to `window` object or global object
+
+### use strick
+Basically it is a restriction to the code. ES6 Modules have 'use strict' by default
+```js
+//1: give methods access to their object
+const obj = {
+  name: 'kannan',
+  sing: function() {
+    return `la la la ${this.name}`
+  },
+  singleAgain(){
+    return this.sing() + ' !'
+  }
+}
+
+console.log(obj.sing());
+console.log(obj.singleAgain())
+```
+2: execute same code for multiple object
+```js
+function importantPerson() {
+  console.log(this.name + '!')
+}
+
+const obj1 = {
+  name: 'kannan',
+  importantPerson
+}
+
+const obj2 = {
+  name: 'sree',
+  importantPerson
+}
+
+obj1.importantPerson()  // kannan!
+obj2.importantPerson()  // sree!
+```
+
+
+* you can't able to declare the variable with out type for example
+  ```js
+  function a(){
+    name = 100
+  } // throw error
+
+  function b(){
+    var name = 100
+  } // work fine
+  ```
+* `this` keyword will not work
+  ```js
+  function a(){
+    'use strict'
+    console.log(this) // undefined
+  }
+  ``` 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
