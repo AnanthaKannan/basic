@@ -14,3 +14,5 @@ Metamask is a wallet to connect with block chain application, you can store add 
 * simple and secure way to connect with blockchain application
 
 ## [see the crypto currency](https://coinmarketcap.com/)
+
+<img src="assets/nft.png" alt="drawing" style="width:50%; height:auto;"/>
