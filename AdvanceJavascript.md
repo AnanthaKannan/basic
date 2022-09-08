@@ -365,12 +365,81 @@ obj2.importantPerson()  // sree!
   }
   ``` 
 
+### Call() Apply() Bind()
+`Call() Apply() and Bind()` all are the default function while we create the function. 
 
+`Call() and Apply()` Both are taking `object` as a first parameter and you can receive this object by using `this` keyword.
 
+Only different between `call and apply` is that, `apply` will take second parameter as a array, But `call` will take as normal way
 
+`Bind()` used to store the function inside the variable, for later use
+```js
+/:Example 1/ 
+function testFn() {
+  return 'return test value'
+}
 
+testFn() // return test value
+testFn.call() // return test value
+tesFn.apply() // return test value
+```
+```js
+/:Example 2/ 
+function testFn(num1, num2) {
+  return `Total value is ${ num1 + num2}`
+}
 
+testFn(10, 12) // Total value is 22
+testFn.call({}, 10, 2) // Total value is 12
+tesFn.apply(this, [3, 2]) // Total value is 5
+```
+```js
+/:Example 3/
+const myObj = {
+  name: 'Kannan',
+  age: 31,
+  merge(arg1) {
+    return `my name is ${this.name} and my age is ${this.age} and my arg is ${arg1}`
+  }
+}
 
+const objAgain = {
+  name: 'sree',
+  age: 30
+}
+myObj.merge(100)  // my name is Kannan and my age is 31 and my arg is 100
+myObj.merge.call(100) // my name is undefined and my age is undefined and my arg is undefined
+myObj.merge.call(objAgain, 100) // my name is sree and my age is 30 and my arg is 100
+const bindStore = myObj.merge.bind(objAgain, 100)
+bindStore() // my name is sree and my age is 30 and my arg is 100
+```
+```js
+function multiply(a, b) {
+  return a * b;
+}
+
+const multiplyByTwo = multiply.bind(this, 2); // first argument is bind
+multiplyByTwo(10) // 20 // second argument is passed
+const multiplyByTen = multiply.bind(this, 10);
+multiplyByTen(21) // 210
+```
+
+# this
+```js
+/:Example 1/
+const character = {
+  name: 'Simon',
+  getCharacter() {
+    return this.name;
+  }
+};
+const giveMeTheCharacterNOW = character.getCharacter;
+ 
+//How Would you fix this?
+console.log('?', giveMeTheCharacterNOW()); //this should return 'Simon' bud doesn't
+```
+
+## Closures and Prototypal Inheritance
 
 
 
